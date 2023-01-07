@@ -1,7 +1,7 @@
 
-# Знакомство с командами Git bash часть 2
+# Git bash part 2
 
-Команды использованные в данной работе:
+Commands used in this task:
 - pwd
 - cd
 - mkdir
@@ -14,119 +14,119 @@
 - cat
 - find
 - grep
-## Выполнение
-Сделать папку dir_1
+## Execution
+Create a folder dir_1
 ```sh
 mkdir dir_1
 ```
-Зайти в папку dir_1
+Go to the folder dir_1
 ```sh
 cd dir_1
 ```
-Создать папку inner_dir_1 
+Create a folder inner_dir_1 
 ```sh
 mkdir inner_dir_1
 ```
-Посмотреть где ты находишься
+Print the current directory
 ```sh
 pwd
 ```
-Находясь в папке dir_1 создать пустой текстовый файл tf_1.txt
+Create an empty text file from the dir_1 folder tf_1.txt
 ```sh
 touch tf_1.txt
 ```
-Находясь в папке dir_1 через команду cat создать текстовый файл tf_2.txt со следующими строками:
+Create the text file tf_2.txt with the following lines from the cat command in the dir_1 folder:
 - the first 1
 - the second 2
 - the third 3
 ```sh
 cat > tf_2.txt CTRL^C
 ```
-Зайти в папку inner_dir_1 
+Go to the folder inner_dir_1 
 ```sh
 cd inner_dir_1
 ```
-Через cat сделать текстовый файл tf_3.txt  c любыми строками
+Using cat make text file tf_3.txt with any strings
 ```sh
 cat > tf_3.txt CTRL^C
 ```
-Через cat добавить в текстовый файл tf_3.txt строку “the second 2”
+Add "the second 2" to the tf_3.txt text file using cat
 ```sh
 cat >> tf_3.txt CTRL^C
 ```
-Через cat добавить в текстовый файл tf_3.txt строку “the sec 2”
+Add "the sec 2" to the tf_3.txt text file using cat
 ```sh
 cat >> tf_3.txt CTRL^C
 ```
-Через cat добавить в текстовый файл tf_2.txt строку “the sec 3”
+Add "the sec 3" to the tf_2.txt text file via cat
 ```sh
 cat >> ../tf_2.txt CTRL^C
 ```
-Через cat добавить в текстовый файл tf_3.txt строку “the SeCoNd 2”
+Add "the SeCoNd 2" to the tf_3.txt text file via cat
 ```sh
 cat >> tf_3.txt CTRL^C
 ```
-Через cat добавить в текстовый файл tf_2.txt строку “the seConD 2”
+Add "the seConD 2" to the tf_2.txt text file via cat
 ```sh
 cat >> ../tf_2.txt CTRL^C
 ```
-Сделать текстовый файл tf_4.txt в котором будет 15 строк.
+Create a text file tf_4.txt with 15 lines.
 ```sh
 vim tf_4.txt i 15 Enter esc :wq
 ```
-Сделать текстовый файл tF_5.txt в котором будет 13 строк.
+Create a text file tF_5.txt with 13 lines.
 ```sh
 vim tF_5.txt i 13 Enter esc :wq
 ```
-Вывести список всех файлов в папке. 
+Lists all files in a folder
 ```sh
 ls */*
 ```
-Выйти из папки inner_dir_1
+Exit Folder inner_dir_1
 ```sh
 cd ..
 ```
-Вывести содержимое файла tf_3.txt в терминал.
+Displays the contents of the tf_3.txt file in the terminal
 ```sh
 cat inner_dir_1/tf_3.txt
 ```
-Найти путь к файлу tf_4.txt 
+Displays the contents of the tf_3.txt file in the terminal. tf_4.txt 
 ```sh
 find ~/dir_1 -name tf_4.txt
 ```
-Отчистить файл tf_4.txt от содержимого без удаления самого файла.
+Remove the tf_4.txt file from the content without deleting the file itself
 ```sh
 > inner_dir_1/tf_4.txt
 ```
-Найти путь к файлам у которых есть  “tf” в названии.-
+Find the path to files that have a "tf" in the name
 ```sh
 find -name "tf*"
 ```
-Найти путь к файлам у которых есть  “tf” в названии и буквы в любом регистре.
+Find the path to files that have a "tf" in the title and letters in any case
 ```sh
 find -iname "tf*"
 ```
-Найти строки в файлах где есть комбинация букв “sec” в текущей папке
+Find strings in files where there is a "sec" combination in the current folder
 ```sh
 grep sec *
 ```
-Найти строки в файлах где есть комбинация букв “sec” в любом регистре в текущей папке
+Find strings in files where there is a "sec" combination in any case in the current folder
 ```sh
 grep -i sec *
 ```
-Найти строки в файлах где есть только комбинация букв “sec” в текущей папке
+Find strings in files where there is only a "sec" combination in the current folder
 ```sh
 grep -w sec *
 ```
-Найти строки в файлах где есть только комбинация букв “sec” в любом регистре в текущей папке
+Find strings in files where there is only a "sec" combination in any case in the current folder
 ```sh
 grep -wi sec *
 ```
-Найти строки в файлах где есть ком..бинация букв “second” в текущей папке 
+Find strings in files where there is com. binging the letters "second" in the current folder
 ```sh
 grep second *
 ```
-Найти строки в файлах где есть комбинация букв “second” в любом регистре в текущей папке
+Find strings in files where there is a "second" combination in any case in the current folder
 ```sh
 grep -i second *
 ```
@@ -134,47 +134,47 @@ grep -i second *
 ```sh
 grep -r "second" ./*/
 ```
-Найти только путь и название файла в строках которых есть комбинация букв “second” в текущей папке
+Find strings in files where there is a "second" combination in all folders below the level
 ```sh
 grep -l second *
 ```
-Найти все строки во всех файлах где нет комбинации “second” 
+Find all strings in all files where there is no "second" combination
 ```sh
 grep -vr second
 ```
-Найти только название и путь к файлам где нет комбинации “second”
+Find only name and file path where there is no "second" combination
 ```sh
 grep -rL second *
 ```
-Вывести в терминал 4 последних строк любого текстового файла
+Display the last 4 lines of any text file
 ```sh
 tail -n 4 inner_dir_1/tF_5.txt
 ```
-Вывести в терминал 4 первые строки любого текстового файла.
+Print the first lines of any text file in Terminal 4.
 ```sh
 head -n 4 inner_dir_1/tF_5.txt
 ```
-Команда в одну строку. Создать папку и создать текстовый файл с содержиммым.
+Command in one line. Create a folder and create a text file with the contents.
 ```sh
 mkdir inner_dir_2 | echo hello > file.txt
 ```
-Команда в одну строку. Переместить в любую одну папку текстовые файлы у которых в содержимом есть слово  “sec”
+Command in one line. Move to any single folder text files that have the word "sec" in the content
 ```sh
 grep -wlr "sec" . | xargs mv -t inner_dir_2
 ```
-Команда в одну строку. Скопировать в любую одну папку текстовые файлы у которых в содержимом есть слово “sec” 
+Command in one line. Copy to any single folder text files that have the word "sec" in the content
 ```sh
 grep -wlr "sec" . | xargs cp -t inner_dir_1
 ```
- Команда в одну строку. Найти все строки c “sec” во всех текстовых файлах, скопировать и вставить эти строки в один новый созданный текстовый файл.
+Command in one line. Find all strings with "sec" in all text files, copy and paste these strings into one newly created text file.
 ```sh
 grep -rh "sec" > new.txt
 ```
-Команда в одну строку. Удалить текстовые файлы у которых в содержимом есть слово “sec” 
+Command in one line. Delete text files that have the word "sec" in their content
 ```sh
 grep -wlr "sec" . | xargs rm
 ```
-Просто вывести в терминал строку “Good job!!” 
+Simply display the line "Good job!"
 ```sh
 echo "Good job\!\!"
 ```

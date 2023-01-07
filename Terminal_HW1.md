@@ -1,7 +1,5 @@
 
-# Знакомство с командами Git bash
-
-Команды использованные в данной работе:
+# Commands used in this task:
 - pwd
 - cd
 - mkdir
@@ -15,96 +13,96 @@
 - date
 - curl
 ## Выполнение
-Посмотреть где я
+Display current location
 ```sh
 pwd
 ```
-Создать папку
+Create a folder
 ```sh
 mkdir hw1
 ```
-Зайти в папку
+Go to a folder
 ```sh
 cd hw1
 ```
-Создать 3 папки
+Create 3 Folders
 ```sh
 mkdir hw2  hw3 hw4
 ```
-Зайти в любоую папку
+Go into any folder
 ```sh
 cd hw2
 ```
-Создать 5 файлов (3 txt, 2 json)
+Create 5 files (3 txt, 2 json)
 ```sh
 touch f1.txt f2.txt f3.txt fj1.json fj2.json
 ```
-Создать 3 папки
+Create 3 folders
 ```sh
 mkdir hw5 hw6 hw7
 ```
-Вывести список содержимого папки
+List the contents of the folder
 ```sh
 ls -la
 ```
-Открыть любой txt файл
+Open any txt file
 ```sh
 vim f3.txt
 ```
-написать туда что-нибудь, любой текст
+Write any text
 ```sh
 -i
 ```
-сохранить и выйти.
+Save and exit
 ```sh
 ESC:wq
 ```
-Выйти из папки на уровень выше
+Exit folder to the level above
 ```sh
 cd ..
 ```
-переместить любые 2 файла, которые вы создали, в любую другую папку
+Move any 2 files you created to any other folder
 ```sh
 mv {hw2/f1.txt,hw2/fj1.json} hw2/hw7/
 ```
-скопировать любые 2 файла, которые вы создали, в любую другую папку
+Copy any 2 files you have created to any other folder
 ```sh
 cp {hw2/hw7/f1.txt,hw2/hw7/fj1.json} hw3/
 ```
-Найти файл по имени
+Find File by Name
 ```sh
 find . -name fj2.json
 ```
-просмотреть содержимое в реальном времени (команда grep) изучите как она работает
+View content in real time (grep command) learn how it works
 ```sh
 tail -f ../f3.txt
 ```
-вывести несколько первых строк из текстового файла
+Print the first few lines from the text file
 ```sh
 head -n 2 ../f3.txt
 ```
-вывести несколько последних строк из текстового файла
+Output a few last lines from the text file
 ```sh
 tail -n 2 ../f3.txt
 ```
-просмотреть содержимое длинного файла (команда less) изучите как она работает
+View the contents of a long file (less) Learn how it works
 ```sh
 less FolderMoveLog.txt
 ```
-вывести дату и время
+Print date and time
 ```sh
 date
 ```
-## Выполнение запросов 
-Отправить http запрос на сервер.
+## Execution of queries
+Send http request to server.
 ```sh
 curl http://162.55.220.72:5005/terminal-hw-request
 ```
 ```sh
-curl  -X PUST'http://162.55.220.72:5005/get_method?name=Julia&age=28'
+curl  -X PUST'http://162.55.220.72:5005/get_method?name=Renata&age=38'
 ```
-## Написание скрипта
-Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+## Writing scripts
+Write a script that will automatically execute items 3, 4, 5, 6, 7, 8, 13
 ```sh
 vim script.sh
 
